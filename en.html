@@ -338,6 +338,29 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 .pf:hover .ycimg{transform:scale(1.08)}
 .pfs{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:560px){.pfs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ===== legal band ===== */
+.rcband{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 12px;padding:9px max(5vw,16px);background:#0f0d0d;border-bottom:1px solid var(--line);font-size:13.5px;color:#d9d3cf;letter-spacing:.01em;text-align:center}
+.rcband b{color:var(--ink);font-weight:600}
+.rcband .sep{width:4px;height:4px;border-radius:50%;background:#5a5452}
+.rc-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e22}
+.rcband a{margin-left:6px;color:var(--mute);text-decoration:underline;text-underline-offset:3px}
+.rcband a:hover{color:var(--ink)}
+@media(max-width:560px){.rcband{font-size:12px;padding:8px 14px;gap:4px 9px}.rcband a{display:none}}
+/* ===== terms ===== */
+.legal .head{max-width:760px;margin-bottom:36px}
+.pol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.pol details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:0 22px;transition:border-color .25s}
+.pol details[open]{border-color:#4a2a2f}
+.pol summary{list-style:none;cursor:pointer;padding:20px 28px 20px 0;font-weight:600;font-size:17px;position:relative}
+.pol summary::-webkit-details-marker{display:none}
+.pol summary::after{content:"+";position:absolute;right:0;top:16px;font-size:24px;color:var(--red);transition:transform .25s}
+.pol details[open] summary::after{transform:rotate(45deg)}
+.pol p{margin:0 0 20px;font-size:15px;color:#d9d3cf}
+@media(max-width:1080px){.pol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.pol{grid-template-columns:minmax(0,1fr)}}
+footer{border-top:1px solid var(--line);align-items:center}
+footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -349,6 +372,7 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   <symbol id="meta" viewBox="0 0 64 32"><path d="M8 24c-3 0-5-2.7-5-7.2C3 11 6 6 10 6c3 0 5.4 2.3 9 8.2l3.6 6c2 3.3 3.3 4 4.6 4 2.2 0 3.6-2.6 3.6-6.6 0-4.9-2-8.4-4.6-8.4-1.9 0-3.4 1.5-5.6 4.8" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/><path d="M8 24c3 0 4.6-1.8 8-7.6l2-3.4" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/></symbol>
 </svg>
 
+<div class="rcband"><span class="rc-dot"></span><b>Registered company</b><span class="sep"></span>Extraxium Digital SARL<span class="sep"></span>RCCM BF-OUA-01-2026-B13-09256<a href="#conditions">Terms</a></div>
 <nav>
   <a class="mark" href="#top">Zoubga Kmb <b>Dieudonné</b></a>
   <div class="links"><a href="#apropos">About</a><a href="#meta">Meta advertising</a><a href="#references">References</a><a href="#audit">Audit</a><a href="#realisations">Work</a><a href="#promesse">Promise</a><a href="#offres">Services</a><a href="#formation">Training</a></div>
@@ -494,13 +518,6 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   </div>
 </section>
 
-<section class="band" id="outils">
-  <div class="wrap">
-    <h2>My toolkit</h2>
-    <div class="tools"><span>Meta Ads Manager</span><span>Meta Business Suite</span><span>Pixel and Conversions API</span><span>WhatsApp Business</span><span>Shopify</span><span>YouCan</span><span>WooCommerce</span><span>Hostinger</span><span>Video production and motion design</span><span>Performance reporting</span></div>
-  </div>
-</section>
-
 <section class="band" id="faq" style="padding-top:0">
   <div class="wrap">
     <h2>Frequently asked questions</h2>
@@ -582,9 +599,9 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 
 <section class="band train" id="formation">
   <div class="wrap">
-    <div class="top"><div><p class="eb">Team training</p><h2>Train your team to run their own ads</h2></div><p class="sub">For companies that want to keep control of their acquisition. I train your marketing and sales teams, in English or French, online or on site, wherever you are.</p></div>
+    <div class="top"><div><p class="eb">Team training</p><h2>Train your team to run their own ads</h2></div><p class="sub">For companies that want to keep control of their acquisition. I train your marketing and sales teams, in French, online or on site, wherever you are.</p></div>
     <div class="mods"><div class="mod tilt"><em>01</em><h3>Structure Meta campaigns</h3><p>Auction, objectives, audiences and budget: build a structure that learns fast.</p></div><div class="mod tilt"><em>02</em><h3>Read the numbers and decide</h3><p>Cost per conversation, cost per purchase, ROAS: know what to cut and what to scale.</p></div><div class="mod tilt"><em>03</em><h3>Brief creatives that sell</h3><p>Angles, hooks, formats: produce and test 5 to 20 creatives per campaign.</p></div><div class="mod tilt"><em>04</em><h3>Convert on WhatsApp</h3><p>Response time, scripts, follow-ups: turn conversations into sales.</p></div></div>
-    <div class="fmts"><div><b>Intensive workshop</b><span>1 to 2 days, online or on site</span></div><div><b>Guided programme</b><span>4 weeks, with hands-on work on your accounts</span></div><div><b>Languages</b><span>English or French</span></div><div class="go"><a class="btn red" href="https://wa.me/22670967416?text=Hello%2C%20I%20would%20like%20a%20training%20programme%20for%20our%20marketing%20team." target="_blank" rel="noopener">Request a programme</a><small>Quote on request, based on team size and format.</small></div></div>
+    <div class="fmts"><div><b>Intensive workshop</b><span>1 to 2 days, online or on site</span></div><div><b>Guided programme</b><span>4 weeks, with hands-on work on your accounts</span></div><div><b>Language</b><span>Delivered in French</span></div><div class="go"><a class="btn red" href="https://wa.me/22670967416?text=Hello%2C%20I%20would%20like%20a%20training%20programme%20for%20our%20marketing%20team." target="_blank" rel="noopener">Request a programme</a><small>Quote on request, based on team size and format.</small></div></div>
   </div>
 </section>
 
@@ -611,7 +628,13 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
     </form>
   </div>
 </section>
-<footer><span>Zoubga Kmb Dieudonné · Media buyer and customer acquisition</span><span>Extraxium Digital SARL · RCCM BF-OUA-01-2026-B13-09256 · Burkina Faso</span></footer>
+<section class="band legal" id="conditions">
+  <div class="wrap">
+    <div class="head"><p class="eb">Terms and policies</p><h2>Working together, with full clarity</h2><p class="sub" style="margin:0">What happens before, during and after an engagement. These terms are restated in the quote and invoice issued by Extraxium Digital SARL.</p></div>
+    <div class="pol"><details open><summary>How I work</summary><p>Every engagement starts with a call and a written proposal: measurable goals, deliverables, timelines and price. Nothing starts without your approval. During the engagement you get regular reports and a single point of contact: me.</p></details><details open><summary>Payment</summary><p>Engagements are paid at the start of each period, on an official invoice from Extraxium Digital SARL, by bank transfer, card or mobile money. Ad spend is separate: you pay it directly to Meta from your own account.</p></details><details><summary>What I commit to</summary><p>I commit to what I control: method, timelines, creative quality, transparent numbers and responsiveness. Sales also depend on your offer, pricing, stock and how fast you answer leads, so I never promise guaranteed revenue.</p></details><details><summary>Refund policy</summary><p>Audit: if the report is not delivered within the stated timeframe, it is fully refunded. Engagements: before campaigns go live, you can cancel and be refunded, minus work already completed. Once campaigns are live, the current period is due, and you can stop at the end of that period. Unspent ad budget stays in your account.</p></details><details><summary>Confidentiality</summary><p>Your numbers, audiences and creatives are never shared. A non-disclosure agreement can be signed before the first detailed discussion.</p></details><details><summary>Ownership and access</summary><p>Your ad account, page and audiences remain yours. Paid creatives belong to you and can be reused freely.</p></details></div>
+  </div>
+</section>
+<footer><span>© 2026 Zoubga Kmb Dieudonné · Extraxium Digital SARL</span><a href="#top">Back to top ↑</a></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>

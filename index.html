@@ -338,6 +338,29 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 .pf:hover .ycimg{transform:scale(1.08)}
 .pfs{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:560px){.pfs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* ===== legal band ===== */
+.rcband{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 12px;padding:9px max(5vw,16px);background:#0f0d0d;border-bottom:1px solid var(--line);font-size:13.5px;color:#d9d3cf;letter-spacing:.01em;text-align:center}
+.rcband b{color:var(--ink);font-weight:600}
+.rcband .sep{width:4px;height:4px;border-radius:50%;background:#5a5452}
+.rc-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e22}
+.rcband a{margin-left:6px;color:var(--mute);text-decoration:underline;text-underline-offset:3px}
+.rcband a:hover{color:var(--ink)}
+@media(max-width:560px){.rcband{font-size:12px;padding:8px 14px;gap:4px 9px}.rcband a{display:none}}
+/* ===== terms ===== */
+.legal .head{max-width:760px;margin-bottom:36px}
+.pol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.pol details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:0 22px;transition:border-color .25s}
+.pol details[open]{border-color:#4a2a2f}
+.pol summary{list-style:none;cursor:pointer;padding:20px 28px 20px 0;font-weight:600;font-size:17px;position:relative}
+.pol summary::-webkit-details-marker{display:none}
+.pol summary::after{content:"+";position:absolute;right:0;top:16px;font-size:24px;color:var(--red);transition:transform .25s}
+.pol details[open] summary::after{transform:rotate(45deg)}
+.pol p{margin:0 0 20px;font-size:15px;color:#d9d3cf}
+@media(max-width:1080px){.pol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.pol{grid-template-columns:minmax(0,1fr)}}
+footer{border-top:1px solid var(--line);align-items:center}
+footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -349,6 +372,7 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   <symbol id="meta" viewBox="0 0 64 32"><path d="M8 24c-3 0-5-2.7-5-7.2C3 11 6 6 10 6c3 0 5.4 2.3 9 8.2l3.6 6c2 3.3 3.3 4 4.6 4 2.2 0 3.6-2.6 3.6-6.6 0-4.9-2-8.4-4.6-8.4-1.9 0-3.4 1.5-5.6 4.8" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/><path d="M8 24c3 0 4.6-1.8 8-7.6l2-3.4" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/></symbol>
 </svg>
 
+<div class="rcband"><span class="rc-dot"></span><b>Entreprise immatriculée</b><span class="sep"></span>Extraxium Digital SARL<span class="sep"></span>RCCM BF-OUA-01-2026-B13-09256<a href="#conditions">Conditions</a></div>
 <nav>
   <a class="mark" href="#top">Zoubga Kmb <b>Dieudonné</b></a>
   <div class="links"><a href="#apropos">À propos</a><a href="#meta">Publicité Meta</a><a href="#references">Références</a><a href="#audit">Audit</a><a href="#realisations">Réalisations</a><a href="#promesse">Promesse</a><a href="#offres">Offres</a><a href="#formation">Formation</a></div>
@@ -358,13 +382,13 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 <header class="band" id="top">
   <div class="wrap hero">
     <div>
-      <p class="who in"><strong>Zoubga Kmb Dieudonné</strong> · Media buyer et stratège en acquisition client · Afrique de l'Ouest et international</p>
+      <p class="who in"><strong>Zoubga Kmb Dieudonné</strong> · Media buyer et stratège en acquisition client · Afrique de l’Ouest et international</p>
       <h1 class="in d1">Vos budgets publicitaires, transformés en clients.</h1>
-      <p class="lead in d2">Je conçois, lance et pilote les campagnes publicitaires des entreprises qui veulent des résultats mesurables sur Facebook, Instagram, Messenger et WhatsApp, de la stratégie jusqu'aux conversations qui deviennent des ventes.</p>
+      <p class="lead in d2">Je conçois, lance et pilote les campagnes publicitaires des entreprises qui veulent des résultats mesurables sur Facebook, Instagram, Messenger et WhatsApp, de la stratégie jusqu’aux conversations qui deviennent des ventes.</p>
       <div class="stats in d3">
         <div class="stat"><b><span id="count">93 000</span> $+</b><span>de budget publicitaire piloté en 2026</span></div>
-        <div class="stat"><b>Des centaines</b><span>d'entreprises accompagnées</span></div>
-        <div class="stat"><b>20+</b><span>secteurs d'activité</span></div>
+        <div class="stat"><b>Des centaines</b><span>d’entreprises accompagnées</span></div>
+        <div class="stat"><b>20+</b><span>secteurs d’activité</span></div>
       </div>
       <div class="ctas in d3">
         <a class="btn red" href="#contact">Parler de votre projet</a>
@@ -384,16 +408,16 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
     <div class="about">
       <div class="side">
         <img class="me" src="v/me.jpg" alt="Zoubga Kmb Dieudonné" width="720" height="857">
-        <div><h3>Zoubga Kmb Dieudonné</h3><p>Media buyer, stratège en acquisition client, fondateur d'Extraxium Digital SARL</p></div>
+        <div><h3>Zoubga Kmb Dieudonné</h3><p>Media buyer, stratège en acquisition client, fondateur d’Extraxium Digital SARL</p></div>
       </div>
       <div class="txt">
-        <p>Je ne vends pas de « boosts ». Je construis des systèmes d'acquisition : une offre claire, des créatives qui arrêtent le défilement, des campagnes réglées sur les bonnes audiences, et un suivi chiffré jusqu'à la vente.</p>
-        <p>Depuis le Burkina Faso, j'accompagne des médias, des marques et des entreprises de plus de vingt secteurs, au Burkina, en Côte d'Ivoire et dans la sous-région. En 2026, j'ai piloté plus de 93 000 dollars de budget publicitaire, campagne par campagne, avec une même exigence : chaque centime investi doit pouvoir s'expliquer.</p>
-        <p>Ma force, c'est le terrain : je connais les réalités des marchés africains, la façon dont les clients y achètent et le rôle central de WhatsApp dans la conversion.</p>
+        <p>Je ne vends pas de « boosts ». Je construis des systèmes d’acquisition : une offre claire, des créatives qui arrêtent le défilement, des campagnes réglées sur les bonnes audiences, et un suivi chiffré jusqu’à la vente.</p>
+        <p>Depuis le Burkina Faso, j’accompagne des médias, des marques et des entreprises de plus de vingt secteurs, au Burkina, en Côte d’Ivoire et dans la sous-région. En 2026, j’ai piloté plus de 93 000 dollars de budget publicitaire, campagne par campagne, avec une même exigence : chaque centime investi doit pouvoir s’expliquer.</p>
+        <p>Ma force, c’est le terrain : je connais les réalités des marchés africains, la façon dont les clients y achètent et le rôle central de WhatsApp dans la conversion.</p>
         <div class="facts">
           <div><b>Meta Ads</b>Facebook, Instagram, Messenger, WhatsApp</div>
           <div><b>Créatives</b>Vidéo pub, motion design, voix off</div>
-          <div><b>Marchés</b>Burkina Faso, Côte d'Ivoire, Afrique de l'Ouest</div>
+          <div><b>Marchés</b>Burkina Faso, Côte d’Ivoire, Afrique de l’Ouest</div>
           <div><b>Langues</b>Français, mooré</div>
         </div>
       </div>
@@ -405,23 +429,23 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   <div class="wrap">
     <div class="metahead"><span class="m"><svg viewBox="0 0 64 32" aria-hidden="true"><path d="M8 24c-3 0-5-2.7-5-7.2C3 11 6 6 10 6c3 0 5.4 2.3 9 8.2l3.6 6c2 3.3 3.3 4 4.6 4 2.2 0 3.6-2.6 3.6-6.6 0-4.9-2-8.4-4.6-8.4-1.9 0-3.4 1.5-5.6 4.8" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/><path d="M8 24c3 0 4.6-1.8 8-7.6l2-3.4" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/></svg>Meta</span><div class="apps"><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#0866ff"/><path d="M18.2 32V20h3.6l.6-4.3h-4.2v-2.6c0-1.2.4-2.1 2.1-2.1h2.2V7.2c-.4 0-1.7-.2-3.2-.2-3.1 0-5.3 1.9-5.3 5.4v3.3H10.4V20H14v12z" fill="#fff"/></svg>Facebook</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="igg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#igg2)"/><rect x="7.5" y="7.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/></svg>Instagram</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="msg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0866ff"/><stop offset=".6" stop-color="#a033ff"/><stop offset="1" stop-color="#ff5c87"/></linearGradient></defs><path d="M16 2C8.3 2 2.5 7.6 2.5 15.1c0 3.9 1.6 7.3 4.2 9.6V30l4.4-2.4c1.5.4 3.1.6 4.9.6 7.7 0 13.5-5.6 13.5-13.1S23.7 2 16 2z" fill="url(#msg2)"/><path d="M7.8 19.3l4.6-7.3 4.4 3.3 4.4-3.3-4.6 7.3-4.4-3.3z" fill="#fff"/></svg>Messenger</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#25d366"/><path d="M16 6.5a9.4 9.4 0 0 0-8.1 14.2L6.6 25.4l4.8-1.3A9.4 9.4 0 1 0 16 6.5z" fill="none" stroke="#fff" stroke-width="2"/><path d="M12.6 11.6c.3-.6.6-.6.9-.6h.6c.2 0 .5 0 .7.6l.9 2.1c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.6 1.9 2.7 2.4.3.1.5.1.7-.1l.8-.9c.2-.3.5-.3.7-.2l2 .9c.4.2.5.4.4.7-.1 1-1 1.9-2.1 2-1.6.2-3.6-.6-5.3-2.2-1.6-1.5-2.6-3.3-2.7-4.6 0-.9.2-1.5.4-1.9z" fill="#fff"/></svg>WhatsApp</span></div></div>
     <h2>Comment une campagne Meta crée réellement des clients</h2>
-    <p class="sub">Plus de trois milliards de personnes utilisent chaque jour les applications Meta. La publicité y fonctionne comme une enchère : à chaque affichage, Meta choisit l'annonce qui a le plus de chances d'obtenir le résultat demandé. Mon travail est de faire gagner vos annonces, au meilleur coût.</p>
+    <p class="sub">Plus de trois milliards de personnes utilisent chaque jour les applications Meta. La publicité y fonctionne comme une enchère : à chaque affichage, Meta choisit l’annonce qui a le plus de chances d’obtenir le résultat demandé. Mon travail est de faire gagner vos annonces, au meilleur coût.</p>
     <div class="flow">
-      <div class="step"><i></i><h3>Objectif</h3><p>Ventes, prospects, conversations WhatsApp ou notoriété : l'algorithme optimise ce qu'on lui demande.</p></div>
-      <div class="step"><i></i><h3>Audience</h3><p>Ciblage large, centres d'intérêt, audiences personnalisées et similaires, zones et langues.</p></div>
-      <div class="step"><i></i><h3>Créatives</h3><p>Plusieurs angles et formats testés en parallèle : la créative est aujourd'hui le premier levier de ciblage.</p></div>
-      <div class="step"><i></i><h3>Enchères et budget</h3><p>Structure de campagne, répartition du budget, rythme de dépense et phase d'apprentissage.</p></div>
+      <div class="step"><i></i><h3>Objectif</h3><p>Ventes, prospects, conversations WhatsApp ou notoriété : l’algorithme optimise ce qu’on lui demande.</p></div>
+      <div class="step"><i></i><h3>Audience</h3><p>Ciblage large, centres d’intérêt, audiences personnalisées et similaires, zones et langues.</p></div>
+      <div class="step"><i></i><h3>Créatives</h3><p>Plusieurs angles et formats testés en parallèle : la créative est aujourd’hui le premier levier de ciblage.</p></div>
+      <div class="step"><i></i><h3>Enchères et budget</h3><p>Structure de campagne, répartition du budget, rythme de dépense et phase d’apprentissage.</p></div>
       <div class="step"><i></i><h3>Mesure</h3><p>Pixel, API de conversions et suivi des conversations pour savoir ce qui vend vraiment.</p></div>
       <div class="step"><i></i><h3>Optimisation</h3><p>On coupe ce qui coûte, on renforce ce qui convertit, on renouvelle les créatives avant la lassitude.</p></div>
     </div>
     <h3 style="font-size:24px;margin:0 0 20px">Les chiffres que je pilote pour vous</h3>
     <div class="kpis">
-      <div class="kpi"><b>Coût pour mille</b><p>Ce que coûte la visibilité. Il dit si l'audience est bien choisie.</p></div>
+      <div class="kpi"><b>Coût pour mille</b><p>Ce que coûte la visibilité. Il dit si l’audience est bien choisie.</p></div>
       <div class="kpi"><b>Taux de clic</b><p>La part de personnes qui réagissent. Il juge la force de la créative.</p></div>
-      <div class="kpi"><b>Coût par conversation</b><p>Le prix d'un client qui vous écrit. L'indicateur roi sur WhatsApp.</p></div>
+      <div class="kpi"><b>Coût par conversation</b><p>Le prix d’un client qui vous écrit. L’indicateur roi sur WhatsApp.</p></div>
       <div class="kpi"><b>Retour sur dépense</b><p>Ce que rapporte chaque centime investi, quand les ventes sont mesurées.</p></div>
     </div>
-    <p class="note">Facebook, Instagram, Messenger, WhatsApp et Meta sont des marques de Meta Platforms, Inc. Je travaille sur ces plateformes en tant qu'annonceur indépendant.</p>
+    <p class="note">Facebook, Instagram, Messenger, WhatsApp et Meta sont des marques de Meta Platforms, Inc. Je travaille sur ces plateformes en tant qu’annonceur indépendant.</p>
   </div>
 </section>
 
@@ -451,12 +475,12 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   <div class="wrap two">
     <div>
       <h2>Ma méthode créative</h2>
-      <p class="sub" style="margin-bottom:24px">Sur Meta, la créative fait aujourd'hui l'essentiel du ciblage. Une seule vidéo, c'est un pari. Dix vidéos bien pensées, c'est une méthode.</p>
-      <div class="angles"><span>La douleur</span><span>La preuve</span><span>L'offre</span><span>La démonstration</span><span>Le témoignage</span><span>L'objection levée</span><span>La comparaison</span><span>L'urgence</span></div>
+      <p class="sub" style="margin-bottom:24px">Sur Meta, la créative fait aujourd’hui l’essentiel du ciblage. Une seule vidéo, c’est un pari. Dix vidéos bien pensées, c’est une méthode.</p>
+      <div class="angles"><span>La douleur</span><span>La preuve</span><span>L’offre</span><span>La démonstration</span><span>Le témoignage</span><span>L’objection levée</span><span>La comparaison</span><span>L’urgence</span></div>
     </div>
     <ol class="ladder">
-      <li><b>5 à 20 créatives par campagne</b>Chaque angle est décliné en vidéo, visuel et texte, pour laisser l'algorithme trouver ce qui fonctionne.</li>
-      <li><b>On garde les gagnantes</b>Coût par conversation et coût d'achat décident, pas les goûts. Les créatives qui coûtent sont coupées vite.</li>
+      <li><b>5 à 20 créatives par campagne</b>Chaque angle est décliné en vidéo, visuel et texte, pour laisser l’algorithme trouver ce qui fonctionne.</li>
+      <li><b>On garde les gagnantes</b>Coût par conversation et coût d’achat décident, pas les goûts. Les créatives qui coûtent sont coupées vite.</li>
       <li><b>On renouvelle avant la lassitude</b>Dès que les chiffres baissent, de nouvelles variantes prennent le relais pour garder des coûts bas.</li>
     </ol>
   </div>
@@ -467,8 +491,8 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
     <p class="kick">Ma promesse</p>
     <h2 class="big2">Faire de votre publicité un système qui amène des clients, mois après mois.</h2>
     <div class="pg">
-      <div><b>Je m'investis comme si c'était mon entreprise</b>Chaque centime dépensé doit avoir une raison. Je défends votre budget comme le mien.</div>
-      <div><b>Vous savez toujours où va votre argent</b>Votre compte, vos chiffres, des rapports clairs. Rien n'est caché, rien n'est flou.</div>
+      <div><b>Je m’investis comme si c’était mon entreprise</b>Chaque centime dépensé doit avoir une raison. Je défends votre budget comme le mien.</div>
+      <div><b>Vous savez toujours où va votre argent</b>Votre compte, vos chiffres, des rapports clairs. Rien n’est caché, rien n’est flou.</div>
       <div><b>Votre business repart plus fort</b>Au-delà des campagnes, vous gardez une offre plus claire, des messages qui convertissent et une méthode qui reste.</div>
     </div>
   </div>
@@ -477,7 +501,7 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 <section class="band" id="pourqui">
   <div class="wrap two">
     <div class="fit yes"><h3>Je travaille avec vous si</h3><ul><li>Vous avez une offre qui a déjà trouvé ses premiers clients</li><li>Vous voulez des résultats mesurables, pas seulement de la visibilité</li><li>Vous pouvez investir un budget publicitaire régulier</li><li>Vous êtes prêt à répondre vite aux prospects que la publicité génère</li></ul></div>
-    <div class="fit no"><h3>Ce n'est pas pour vous si</h3><ul><li>Vous cherchez un « boost » ponctuel au moins cher</li><li>Vous attendez des ventes garanties sans tester</li><li>Vous ne voulez pas partager vos chiffres</li></ul></div>
+    <div class="fit no"><h3>Ce n’est pas pour vous si</h3><ul><li>Vous cherchez un « boost » ponctuel au moins cher</li><li>Vous attendez des ventes garanties sans tester</li><li>Vous ne voulez pas partager vos chiffres</li></ul></div>
   </div>
 </section>
 
@@ -486,7 +510,7 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
     <h2>Vos 30 premiers jours</h2>
     <p class="sub">Un démarrage cadré, pour que vous sachiez exactement ce qui se passe chaque semaine.</p>
     <div class="weeks">
-      <div><i>Semaine 1</i><b>Audit et stratégie</b>Analyse de l'offre, des concurrents et des campagnes passées. Objectifs chiffrés validés ensemble.</div>
+      <div><i>Semaine 1</i><b>Audit et stratégie</b>Analyse de l’offre, des concurrents et des campagnes passées. Objectifs chiffrés validés ensemble.</div>
       <div><i>Semaine 2</i><b>Création et lancement</b>Production des premières créatives, installation de la mesure, mise en ligne des campagnes.</div>
       <div><i>Semaine 3</i><b>Tests et apprentissage</b>Lecture quotidienne des chiffres, coupes et renforts, nouvelles variantes.</div>
       <div><i>Semaine 4</i><b>Optimisation et bilan</b>On concentre le budget sur ce qui convertit. Bilan détaillé et plan du mois suivant.</div>
@@ -494,23 +518,16 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   </div>
 </section>
 
-<section class="band" id="outils">
-  <div class="wrap">
-    <h2>Mes outils</h2>
-    <div class="tools"><span>Gestionnaire de publicités Meta</span><span>Meta Business Suite</span><span>Pixel et API de conversions</span><span>WhatsApp Business</span><span>Shopify</span><span>YouCan</span><span>WooCommerce</span><span>Hostinger</span><span>Production vidéo et motion design</span><span>Rapports de performance</span></div>
-  </div>
-</section>
-
 <section class="band" id="faq" style="padding-top:0">
   <div class="wrap">
     <h2>Questions fréquentes</h2>
     <div class="faq">
-      <details><summary>Quel budget publicitaire faut-il prévoir ?</summary><p>Il dépend de votre marché et de vos objectifs. Nous le fixons ensemble pendant l'audit. Le budget publicitaire est toujours payé directement à Meta depuis votre compte, en plus de mes honoraires.</p></details>
+      <details><summary>Quel budget publicitaire faut-il prévoir ?</summary><p>Il dépend de votre marché et de vos objectifs. Nous le fixons ensemble pendant l’audit. Le budget publicitaire est toujours payé directement à Meta depuis votre compte, en plus de mes honoraires.</p></details>
       <details><summary>En combien de temps voit-on des résultats ?</summary><p>Les premières données arrivent dès la première semaine. Il faut généralement deux à quatre semaines de tests pour trouver les créatives et les audiences qui performent, puis on accélère.</p></details>
-      <details><summary>Travaillez-vous avec des entreprises hors d'Afrique ?</summary><p>Oui. Je travaille à distance, en français, avec des entreprises qui ciblent l'Afrique de l'Ouest, l'Europe ou les deux.</p></details>
+      <details><summary>Travaillez-vous avec des entreprises hors d’Afrique ?</summary><p>Oui. Je travaille à distance, en français, avec des entreprises qui ciblent l’Afrique de l’Ouest, l’Europe ou les deux.</p></details>
       <details><summary>Qui garde le contrôle du compte publicitaire ?</summary><p>Vous. Je travaille dans votre gestionnaire de publicités avec un accès partenaire. Vous voyez tout, à tout moment.</p></details>
       <details><summary>Mes informations restent-elles confidentielles ?</summary><p>Oui. Vos chiffres, vos audiences et vos créatives ne sont jamais partagés. Un accord de confidentialité peut être signé avant de commencer.</p></details>
-      <details><summary>Comment se passe le paiement ?</summary><p>Par virement bancaire international, carte ou mobile money, avec une facture officielle d'Extraxium Digital SARL.</p></details>
+      <details><summary>Comment se passe le paiement ?</summary><p>Par virement bancaire international, carte ou mobile money, avec une facture officielle d’Extraxium Digital SARL.</p></details>
     </div>
   </div>
 </section>
@@ -519,8 +536,8 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   <div class="wrap webw">
     <div>
       <h2>Sites web et pages de vente</h2>
-      <p class="sub" style="margin-bottom:22px">Une bonne publicité a besoin d'une bonne destination. Je conçois des sites rapides, clairs et pensés pour convertir, reliés à vos campagnes et à WhatsApp.</p>
-      <div class="wl"><div><b>Site vitrine</b>Présenter l'entreprise, ses services et rassurer les grands comptes.</div><div><b>Page de vente</b>Une offre, un message, un bouton : la page qui transforme le clic en client.</div><div><b>Boutique e-commerce</b>Boutiques Shopify, YouCan ou WooCommerce prêtes à vendre : catalogue, commande, paiement par carte ou mobile money, livraison.</div><div><b>Suivi des conversions</b>Pixel Meta et mesure installés pour savoir ce que rapportent vos publicités.</div></div>
+      <p class="sub" style="margin-bottom:22px">Une bonne publicité a besoin d’une bonne destination. Je conçois des sites rapides, clairs et pensés pour convertir, reliés à vos campagnes et à WhatsApp.</p>
+      <div class="wl"><div><b>Site vitrine</b>Présenter l’entreprise, ses services et rassurer les grands comptes.</div><div><b>Page de vente</b>Une offre, un message, un bouton : la page qui transforme le clic en client.</div><div><b>Boutique e-commerce</b>Boutiques Shopify, YouCan ou WooCommerce prêtes à vendre : catalogue, commande, paiement par carte ou mobile money, livraison.</div><div><b>Suivi des conversions</b>Pixel Meta et mesure installés pour savoir ce que rapportent vos publicités.</div></div>
     </div>
     <div class="host"><img src="v/logo_hostinger.jpg" alt="Hostinger"><p>Hébergement professionnel, nom de domaine, certificat de sécurité et adresses e-mail à votre nom.</p></div>
   </div>
@@ -530,20 +547,20 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
   <div class="wrap">
     <div>
       <h2>Audit business express</h2>
-      <p class="sub" style="margin-bottom:18px">Avant d'investir, sachez exactement ce qui vous fait perdre des clients. En 72 heures, je passe votre activité au crible et je vous remets un plan d'action concret.</p>
+      <p class="sub" style="margin-bottom:18px">Avant d’investir, sachez exactement ce qui vous fait perdre des clients. En 72 heures, je passe votre activité au crible et je vous remets un plan d’action concret.</p>
       <div class="ap"><b>99 $</b><span>à partir de · ≈ 90 € · ≈ 59 000 F</span></div>
       <div class="cols">
-        <div><h3>Ce que j'analyse</h3><ul>
+        <div><h3>Ce que j’analyse</h3><ul>
           <li>Votre offre, vos prix et votre positionnement</li>
           <li>Vos pages Facebook et Instagram, votre image de marque</li>
           <li>Vos publicités actuelles : ciblage, créatives, budget, coûts</li>
           <li>Trois concurrents et leurs publicités actives</li>
-          <li>Le parcours client jusqu'à WhatsApp : délai de réponse, discours, relance</li>
+          <li>Le parcours client jusqu’à WhatsApp : délai de réponse, discours, relance</li>
         </ul></div>
         <div><h3>Ce que vous recevez</h3><ul>
           <li>Un document clair : ce qui bloque votre business, pourquoi, et quoi faire étape par étape</li><li>Une note sur cinq axes pour voir où vous en êtes</li>
           <li>La liste des fuites qui vous coûtent des clients</li>
-          <li>Un plan d'action sur 30 jours, par priorité</li>
+          <li>Un plan d’action sur 30 jours, par priorité</li>
           <li>Trois idées de créatives prêtes à produire</li>
           <li>Un appel de restitution de 45 minutes</li>
         </ul></div>
@@ -552,7 +569,7 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
     </div>
     <div class="blobbox" id="blob"><div class="fb" id="fb"></div>
       <div class="chip3 c1">Note globale<b>sur 5 axes</b></div>
-      <div class="chip3 c2">Plan d'action<b>30 jours</b></div>
+      <div class="chip3 c2">Plan d’action<b>30 jours</b></div>
       <div class="chip3 c3">Rapport remis<b>sous 72 h</b></div>
     </div>
   </div>
@@ -563,14 +580,14 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
     <div class="ph"><h2>Accompagnements</h2><div class="cur" id="cur" role="group" aria-label="Devise"><button data-c="XOF" aria-pressed="true">FCFA</button><button data-c="EUR" aria-pressed="false">EUR</button><button data-c="USD" aria-pressed="false">USD</button></div></div>
     <p class="sub">Des accompagnements réservés aux entreprises qui investissent sérieusement dans leur croissance. Chaque accompagnement commence par un audit de votre offre et de vos campagnes.</p>
     <div class="plans" id="plans"></div>
-<div class="rythme"><div><b>Votre budget est différent ?</b><span>J'accompagne aussi à votre rythme. Parlons-en et construisons une formule adaptée à vos moyens et à vos objectifs.</span></div><a class="btn sm" href="#contact">En discuter</a></div>
+<div class="rythme"><div><b>Votre budget est différent ?</b><span>J’accompagne aussi à votre rythme. Parlons-en et construisons une formule adaptée à vos moyens et à vos objectifs.</span></div><a class="btn sm" href="#contact">En discuter</a></div>
 <div class="engage"><h3>Mes engagements</h3><div class="eg">
 <div><b>Objectifs chiffrés avant le lancement</b>Coût par conversation, volume de prospects, retour sur dépense : on fixe ensemble les cibles et on les suit.</div>
 <div><b>Campagnes en ligne sous 72 heures</b>Après validation de la stratégie et des créatives.</div>
-<div><b>Rapports réguliers et lisibles</b>Ce qui marche, ce qui coûte, ce qu'on change, sans jargon.</div>
+<div><b>Rapports réguliers et lisibles</b>Ce qui marche, ce qui coûte, ce qu’on change, sans jargon.</div>
 <div><b>Votre compte reste le vôtre</b>Tout est géré dans votre gestionnaire de publicités, avec un accès complet.</div>
 <div><b>Confidentialité</b>Vos chiffres, vos audiences et vos créatives ne sortent pas de la mission.</div>
-<div><b>Pas de promesse miracle</b>La publicité se teste et s'améliore : je m'engage sur la méthode, la réactivité et la transparence.</div>
+<div><b>Pas de promesse miracle</b>La publicité se teste et s’améliore : je m’engage sur la méthode, la réactivité et la transparence.</div>
 </div></div>
     <div class="terms">
       <div><b>Budget publicitaire à part</b>Payé directement à Meta depuis votre compte. Vous gardez la maîtrise totale de vos dépenses.</div>
@@ -582,9 +599,9 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 
 <section class="band train" id="formation">
   <div class="wrap">
-    <div class="top"><div><p class="eb">Formation des équipes</p><h2>Formez vos équipes à piloter leurs publicités</h2></div><p class="sub">Pour les entreprises qui veulent garder la main sur leur acquisition. Je forme vos équipes marketing et commerciales, en français ou en anglais, en ligne ou dans vos locaux, où que vous soyez.</p></div>
+    <div class="top"><div><p class="eb">Formation des équipes</p><h2>Formez vos équipes à piloter leurs publicités</h2></div><p class="sub">Pour les entreprises qui veulent garder la main sur leur acquisition. Je forme vos équipes marketing et commerciales, en français, en ligne ou dans vos locaux, où que vous soyez.</p></div>
     <div class="mods"><div class="mod tilt"><em>01</em><h3>Structurer ses campagnes Meta</h3><p>Enchère, objectifs, audiences et budget : bâtir une structure qui apprend vite.</p></div><div class="mod tilt"><em>02</em><h3>Lire les chiffres et décider</h3><p>Coût par conversation, coût d’achat, retour sur dépense : savoir quoi couper et quoi renforcer.</p></div><div class="mod tilt"><em>03</em><h3>Briefer des créatives qui vendent</h3><p>Angles, accroches, formats : produire et tester 5 à 20 créatives par campagne.</p></div><div class="mod tilt"><em>04</em><h3>Convertir sur WhatsApp</h3><p>Délai de réponse, scripts, relances : transformer les conversations en ventes.</p></div></div>
-    <div class="fmts"><div><b>Atelier intensif</b><span>1 à 2 jours, en ligne ou sur site</span></div><div><b>Programme accompagné</b><span>4 semaines, avec cas pratiques sur vos comptes</span></div><div><b>Langues</b><span>Français ou anglais</span></div><div class="go"><a class="btn red" href="https://wa.me/22670967416?text=Bonjour%2C%20je%20souhaite%20un%20programme%20de%20formation%20pour%20notre%20%C3%A9quipe%20marketing." target="_blank" rel="noopener">Demander un programme</a><small>Sur devis, selon la taille de l’équipe et le format.</small></div></div>
+    <div class="fmts"><div><b>Atelier intensif</b><span>1 à 2 jours, en ligne ou sur site</span></div><div><b>Programme accompagné</b><span>4 semaines, avec cas pratiques sur vos comptes</span></div><div><b>Langue</b><span>Formation en français</span></div><div class="go"><a class="btn red" href="https://wa.me/22670967416?text=Bonjour%2C%20je%20souhaite%20un%20programme%20de%20formation%20pour%20notre%20%C3%A9quipe%20marketing." target="_blank" rel="noopener">Demander un programme</a><small>Sur devis, selon la taille de l’équipe et le format.</small></div></div>
   </div>
 </section>
 
@@ -602,16 +619,22 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
       <label>Nom complet<input id="n" required autocomplete="name"></label>
       <label>Entreprise<input id="e" required autocomplete="organization"></label>
       <label>Pays<input id="p" placeholder="Burkina Faso"></label>
-      <label>Secteur d'activité<input id="s" placeholder="Automobile, santé, immobilier…"></label>
+      <label>Secteur d’activité<input id="s" placeholder="Automobile, santé, immobilier…"></label>
       <label>Budget que vous pouvez y consacrer<input id="b" placeholder="Ex. 500 000 F par mois"></label>
       <label>Objectif principal<select id="o"><option>Plus de ventes</option><option>Plus de prospects</option><option>Plus de conversations WhatsApp</option><option>Lancer un produit</option><option>Notoriété de la marque</option><option>Audit business express</option></select></label>
       <label class="full">Ce que vous vendez ou proposez comme service<textarea id="m" placeholder="Vos produits ou services, ce que vous avez déjà essayé en publicité, ce que vous attendez."></textarea></label>
       <button class="btn full" type="submit">Préparer ma demande</button>
-      <div id="ok">Votre demande est prête. Appuyez sur le bouton pour l'envoyer sur WhatsApp.<br><a class="btn red sm" id="go" href="https://wa.me/22670967416">Envoyer sur WhatsApp</a></div>
+      <div id="ok">Votre demande est prête. Appuyez sur le bouton pour l’envoyer sur WhatsApp.<br><a class="btn red sm" id="go" href="https://wa.me/22670967416">Envoyer sur WhatsApp</a></div>
     </form>
   </div>
 </section>
-<footer><span>Zoubga Kmb Dieudonné · Media buyer et acquisition client</span><span>Extraxium Digital SARL · RCCM BF-OUA-01-2026-B13-09256 · Burkina Faso</span></footer>
+<section class="band legal" id="conditions">
+  <div class="wrap">
+    <div class="head"><p class="eb">Conditions et politiques</p><h2>Travailler ensemble, en toute clarté</h2><p class="sub" style="margin:0">Ce qui est prévu avant, pendant et après une mission. Ces conditions sont reprises dans le devis et la facture établis par Extraxium Digital SARL.</p></div>
+    <div class="pol"><details open><summary>Comment je travaille</summary><p>Chaque mission commence par un échange et une proposition écrite : objectifs chiffrés, livrables, délais et prix. Rien ne démarre sans votre validation. Pendant la mission, vous recevez des rapports réguliers et un interlocuteur unique : moi.</p></details><details open><summary>Paiement</summary><p>Les accompagnements se règlent au début de chaque période, sur facture officielle d’Extraxium Digital SARL, par virement bancaire, carte ou mobile money. Le budget publicitaire est à part : vous le payez directement à Meta depuis votre propre compte.</p></details><details><summary>Conditions de mes engagements</summary><p>Je m’engage sur ce que je maîtrise : la méthode, les délais, la qualité des créatives, la transparence des chiffres et la réactivité. Les ventes dépendent aussi de votre offre, de vos prix, de votre stock et de la rapidité de réponse à vos prospects : je ne promets donc jamais un chiffre d’affaires garanti.</p></details><details><summary>Politique de remboursement</summary><p>Audit : si le rapport n’est pas remis dans le délai annoncé, il est remboursé intégralement. Accompagnement : avant le lancement des campagnes, vous pouvez annuler et être remboursé, déduction faite du travail déjà réalisé. Une fois les campagnes lancées, la période en cours est due, et vous pouvez arrêter à la fin de cette période. Le budget publicitaire non dépensé reste sur votre compte.</p></details><details><summary>Confidentialité</summary><p>Vos chiffres, vos audiences et vos créatives ne sont jamais partagés. Un accord de confidentialité peut être signé avant le premier échange détaillé.</p></details><details><summary>Propriété et accès</summary><p>Votre compte publicitaire, votre page et vos audiences restent à vous. Les créatives réglées vous appartiennent et vous pouvez les réutiliser librement.</p></details></div>
+  </div>
+</section>
+<footer><span>© 2026 Zoubga Kmb Dieudonné · Extraxium Digital SARL</span><a href="#top">Haut de page ↑</a></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
