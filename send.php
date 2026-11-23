@@ -35,7 +35,7 @@ $goal    = field('goal', 120);
 $message = field('message', 4000);
 $lang    = field('lang', 4) === 'en' ? 'EN' : 'FR';
 
-if ($name === '' || $company === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if ($name === '' || $company === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || field('consent', 2) !== '1') {
     http_response_code(422);
     echo json_encode(['ok' => false, 'error' => 'invalid']);
     exit;
@@ -63,6 +63,7 @@ $body .= "Secteur : $sector\n";
 $body .= "Budget : $budget\n";
 $body .= "Objectif : $goal\n\n";
 $body .= "Produits ou services :\n$message\n\n";
+$body .= "Le client a confirmé : demande sérieuse, budget publicitaire prévu, accepte d'être recontacté.\n\n";
 $body .= "---\nRépondez directement à cet e-mail pour écrire à $name.\n";
 
 $subject = '=?UTF-8?B?' . base64_encode('Nouvelle demande : ' . $oneLine($company) . ' (' . $oneLine($name) . ')') . '?=';

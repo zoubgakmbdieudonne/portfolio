@@ -396,6 +396,10 @@ footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
 #f .alt{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:14px;color:#57504c}
 #f .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 #f button[disabled]{opacity:.6;cursor:wait}
+
+#f .chk{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;font-size:14.5px;font-weight:500;line-height:1.45;color:#2a2523;background:#f6f3f1;border:1.5px solid #e4ddd9;border-radius:12px;padding:14px 16px;cursor:pointer}
+#f .chk input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:#d3172e;cursor:pointer}
+#f .chk.need{border-color:#d3172e;background:#fdf0f1}
 </style>
 </head>
 <body>
@@ -660,6 +664,7 @@ footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
       <label>Budget que vous pouvez y consacrer<input id="b" placeholder="Ex. 500 000 F par mois"></label>
       <label>Objectif principal<select id="o"><option>Plus de ventes</option><option>Plus de prospects</option><option>Plus de conversations WhatsApp</option><option>Lancer un produit</option><option>Notoriété de la marque</option><option>Audit business express</option></select></label>
       <label class="full">Ce que vous vendez ou proposez comme service<textarea id="m" placeholder="Vos produits ou services, ce que vous avez déjà essayé en publicité, ce que vous attendez."></textarea></label>
+      <label class="chk" id="chkl"><input type="checkbox" id="ck" required><span>Je confirme que ma demande est sérieuse : mon entreprise dispose d’un budget pour la publicité et j’accepte d’être recontacté par e-mail ou WhatsApp pour en discuter.</span></label>
       <input class="hp" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn full" type="submit" id="sb2">Envoyer ma demande</button>
       <div class="msg" id="msg" role="status"></div>
@@ -702,11 +707,14 @@ const f=document.getElementById('f'),msg=document.getElementById('msg'),go=docum
 const val=id=>document.getElementById(id).value.trim();
 const waText=()=>`Bonjour, je souhaite échanger sur un accompagnement publicitaire.\nNom : ${val('n')}\nEntreprise : ${val('e')}\nE-mail : ${val('em')}\nTéléphone : ${val('tl')}\nPays : ${val('p')}\nSecteur : ${val('s')}\nBudget : ${val('b')}\nObjectif : ${val('o')}\nProduits ou services : ${val('m')}`;
 const upd=()=>{go.href='https://wa.me/22670967416?text='+encodeURIComponent(waText());};
-f.addEventListener('input',upd);f.addEventListener('change',upd);
+f.addEventListener('input',upd);
+document.getElementById('ck').addEventListener('change',e=>{if(e.target.checked){document.getElementById('chkl').classList.remove('need');if(msg.classList.contains('err'))msg.className='msg';}});
+go.addEventListener('click',e=>{if(!document.getElementById('ck').checked){e.preventDefault();document.getElementById('chkl').classList.add('need');msg.textContent='Cochez la case de confirmation pour envoyer votre demande.';msg.className='msg err';document.getElementById('ck').focus();}});f.addEventListener('change',upd);
 f.addEventListener('submit',async e=>{e.preventDefault();
  for(const id of ['n','e','em']){const el=document.getElementById(id);if(!val(id)||(id==='em'&&!el.checkValidity())){el.focus();return;}}
+ if(!document.getElementById('ck').checked){const l=document.getElementById('chkl');l.classList.add('need');msg.textContent='Cochez la case de confirmation pour envoyer votre demande.';msg.className='msg err';document.getElementById('ck').focus();return;}
  upd();sb2.disabled=true;const lbl=sb2.textContent;sb2.textContent='Envoi en cours…';msg.className='msg';
- const d=new FormData();d.append('lang','fr');[['n','name'],['e','company'],['em','email'],['tl','phone'],['p','country'],['s','sector'],['b','budget'],['o','goal'],['m','message'],['hp','website']].forEach(([i,k])=>d.append(k,val(i)));
+ const d=new FormData();d.append('lang','fr');[['n','name'],['e','company'],['em','email'],['tl','phone'],['p','country'],['s','sector'],['b','budget'],['o','goal'],['m','message'],['hp','website']].forEach(([i,k])=>d.append(k,val(i)));d.append('consent',document.getElementById('ck').checked?'1':'');
  try{const r=await fetch('send.php',{method:'POST',body:d});const j=await r.json();if(!r.ok||!j.ok)throw 0;msg.textContent='Merci, votre demande m’a bien été envoyée. Je vous réponds sous 24 heures.';msg.className='msg ok';}
  catch(_){msg.textContent='L’envoi par e-mail n’a pas abouti. Vous pouvez m’envoyer votre demande directement sur WhatsApp :';msg.className='msg err';}
  sb2.disabled=false;sb2.textContent=lbl;msg.scrollIntoView({block:'nearest',behavior:'smooth'});});
