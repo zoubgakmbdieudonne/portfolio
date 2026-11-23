@@ -361,6 +361,22 @@ footer{padding:28px max(5vw,16px);display:flex;justify-content:space-between;gap
 @media(max-width:640px){.pol{grid-template-columns:minmax(0,1fr)}}
 footer{border-top:1px solid var(--line);align-items:center}
 footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
+
+/* meta photo */
+.mtop{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;margin-bottom:44px}
+.mtop .sub{margin-bottom:0}
+.mfig{margin:0;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 40px 80px -40px #0f142066,0 0 0 1px #dfe4ee}
+.mfig img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
+.mfig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#0866ff22);pointer-events:none}
+.mfig figcaption{position:absolute;left:16px;bottom:16px;z-index:2;display:flex;gap:8px;align-items:center;background:#ffffffe6;backdrop-filter:blur(6px);color:#0f1420;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px}
+.mfig figcaption i{width:8px;height:8px;border-radius:50%;background:#0866ff;flex:none}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-2%,1%)}}
+@media(max-width:860px){.mtop{grid-template-columns:minmax(0,1fr);gap:28px}}
+@media(max-width:560px){.mfig figcaption{font-size:11.5px;left:10px;bottom:10px;padding:7px 11px}}
+@media(prefers-reduced-motion:reduce){.mfig img{animation:none}}
+/* budget icon */
+.stat b .sic{display:inline-block;width:.78em;height:.78em;object-fit:contain;vertical-align:-.05em;margin-right:.2em}
+.terms .bic{display:inline-block;width:20px;height:20px;object-fit:contain;vertical-align:-3px;margin-right:8px}
 </style>
 </head>
 <body>
@@ -386,7 +402,7 @@ footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
       <h1 class="in d1">Vos budgets publicitaires, transformés en clients.</h1>
       <p class="lead in d2">Je conçois, lance et pilote les campagnes publicitaires des entreprises qui veulent des résultats mesurables sur Facebook, Instagram, Messenger et WhatsApp, de la stratégie jusqu’aux conversations qui deviennent des ventes.</p>
       <div class="stats in d3">
-        <div class="stat"><b><span id="count">93 000</span> $+</b><span>de budget publicitaire piloté en 2026</span></div>
+        <div class="stat"><b><img class="sic" src="v/ic_budget.png" alt=""><span id="count">93 000</span> $+</b><span>de budget publicitaire piloté en 2026</span></div>
         <div class="stat"><b>Des centaines</b><span>d’entreprises accompagnées</span></div>
         <div class="stat"><b>20+</b><span>secteurs d’activité</span></div>
       </div>
@@ -427,9 +443,9 @@ footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
 
 <section class="band meta" id="meta">
   <div class="wrap">
-    <div class="metahead"><span class="m"><svg viewBox="0 0 64 32" aria-hidden="true"><path d="M8 24c-3 0-5-2.7-5-7.2C3 11 6 6 10 6c3 0 5.4 2.3 9 8.2l3.6 6c2 3.3 3.3 4 4.6 4 2.2 0 3.6-2.6 3.6-6.6 0-4.9-2-8.4-4.6-8.4-1.9 0-3.4 1.5-5.6 4.8" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/><path d="M8 24c3 0 4.6-1.8 8-7.6l2-3.4" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/></svg>Meta</span><div class="apps"><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#0866ff"/><path d="M18.2 32V20h3.6l.6-4.3h-4.2v-2.6c0-1.2.4-2.1 2.1-2.1h2.2V7.2c-.4 0-1.7-.2-3.2-.2-3.1 0-5.3 1.9-5.3 5.4v3.3H10.4V20H14v12z" fill="#fff"/></svg>Facebook</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="igg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#igg2)"/><rect x="7.5" y="7.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/></svg>Instagram</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="msg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0866ff"/><stop offset=".6" stop-color="#a033ff"/><stop offset="1" stop-color="#ff5c87"/></linearGradient></defs><path d="M16 2C8.3 2 2.5 7.6 2.5 15.1c0 3.9 1.6 7.3 4.2 9.6V30l4.4-2.4c1.5.4 3.1.6 4.9.6 7.7 0 13.5-5.6 13.5-13.1S23.7 2 16 2z" fill="url(#msg2)"/><path d="M7.8 19.3l4.6-7.3 4.4 3.3 4.4-3.3-4.6 7.3-4.4-3.3z" fill="#fff"/></svg>Messenger</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#25d366"/><path d="M16 6.5a9.4 9.4 0 0 0-8.1 14.2L6.6 25.4l4.8-1.3A9.4 9.4 0 1 0 16 6.5z" fill="none" stroke="#fff" stroke-width="2"/><path d="M12.6 11.6c.3-.6.6-.6.9-.6h.6c.2 0 .5 0 .7.6l.9 2.1c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.6 1.9 2.7 2.4.3.1.5.1.7-.1l.8-.9c.2-.3.5-.3.7-.2l2 .9c.4.2.5.4.4.7-.1 1-1 1.9-2.1 2-1.6.2-3.6-.6-5.3-2.2-1.6-1.5-2.6-3.3-2.7-4.6 0-.9.2-1.5.4-1.9z" fill="#fff"/></svg>WhatsApp</span></div></div>
+    <div class="mtop"><div><div class="metahead"><span class="m"><svg viewBox="0 0 64 32" aria-hidden="true"><path d="M8 24c-3 0-5-2.7-5-7.2C3 11 6 6 10 6c3 0 5.4 2.3 9 8.2l3.6 6c2 3.3 3.3 4 4.6 4 2.2 0 3.6-2.6 3.6-6.6 0-4.9-2-8.4-4.6-8.4-1.9 0-3.4 1.5-5.6 4.8" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/><path d="M8 24c3 0 4.6-1.8 8-7.6l2-3.4" fill="none" stroke="#0866ff" stroke-width="3.6" stroke-linecap="round"/></svg>Meta</span><div class="apps"><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#0866ff"/><path d="M18.2 32V20h3.6l.6-4.3h-4.2v-2.6c0-1.2.4-2.1 2.1-2.1h2.2V7.2c-.4 0-1.7-.2-3.2-.2-3.1 0-5.3 1.9-5.3 5.4v3.3H10.4V20H14v12z" fill="#fff"/></svg>Facebook</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="igg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".35" stop-color="#fa7e1e"/><stop offset=".6" stop-color="#d62976"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#igg2)"/><rect x="7.5" y="7.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="16" r="4.2" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/></svg>Instagram</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="msg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0866ff"/><stop offset=".6" stop-color="#a033ff"/><stop offset="1" stop-color="#ff5c87"/></linearGradient></defs><path d="M16 2C8.3 2 2.5 7.6 2.5 15.1c0 3.9 1.6 7.3 4.2 9.6V30l4.4-2.4c1.5.4 3.1.6 4.9.6 7.7 0 13.5-5.6 13.5-13.1S23.7 2 16 2z" fill="url(#msg2)"/><path d="M7.8 19.3l4.6-7.3 4.4 3.3 4.4-3.3-4.6 7.3-4.4-3.3z" fill="#fff"/></svg>Messenger</span><span class="app"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#25d366"/><path d="M16 6.5a9.4 9.4 0 0 0-8.1 14.2L6.6 25.4l4.8-1.3A9.4 9.4 0 1 0 16 6.5z" fill="none" stroke="#fff" stroke-width="2"/><path d="M12.6 11.6c.3-.6.6-.6.9-.6h.6c.2 0 .5 0 .7.6l.9 2.1c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4 0 .7.6 1 1.6 1.9 2.7 2.4.3.1.5.1.7-.1l.8-.9c.2-.3.5-.3.7-.2l2 .9c.4.2.5.4.4.7-.1 1-1 1.9-2.1 2-1.6.2-3.6-.6-5.3-2.2-1.6-1.5-2.6-3.3-2.7-4.6 0-.9.2-1.5.4-1.9z" fill="#fff"/></svg>WhatsApp</span></div></div>
     <h2>Comment une campagne Meta crée réellement des clients</h2>
-    <p class="sub">Plus de trois milliards de personnes utilisent chaque jour les applications Meta. La publicité y fonctionne comme une enchère : à chaque affichage, Meta choisit l’annonce qui a le plus de chances d’obtenir le résultat demandé. Mon travail est de faire gagner vos annonces, au meilleur coût.</p>
+    <p class="sub">Plus de trois milliards de personnes utilisent chaque jour les applications Meta. La publicité y fonctionne comme une enchère : à chaque affichage, Meta choisit l’annonce qui a le plus de chances d’obtenir le résultat demandé. Mon travail est de faire gagner vos annonces, au meilleur coût.</p></div><figure class="mfig tilt"><img src="v/meta_hq.jpg" alt="Siège de Meta" loading="lazy"></figure></div>
     <div class="flow">
       <div class="step"><i></i><h3>Objectif</h3><p>Ventes, prospects, conversations WhatsApp ou notoriété : l’algorithme optimise ce qu’on lui demande.</p></div>
       <div class="step"><i></i><h3>Audience</h3><p>Ciblage large, centres d’intérêt, audiences personnalisées et similaires, zones et langues.</p></div>
@@ -590,7 +606,7 @@ footer a{color:var(--mute);text-decoration:none}footer a:hover{color:var(--ink)}
 <div><b>Pas de promesse miracle</b>La publicité se teste et s’améliore : je m’engage sur la méthode, la réactivité et la transparence.</div>
 </div></div>
     <div class="terms">
-      <div><b>Budget publicitaire à part</b>Payé directement à Meta depuis votre compte. Vous gardez la maîtrise totale de vos dépenses.</div>
+      <div><b><img class="bic" src="v/ic_budget.png" alt="">Budget publicitaire à part</b>Payé directement à Meta depuis votre compte. Vous gardez la maîtrise totale de vos dépenses.</div>
       <div><b>Transparence</b>Accès à votre gestionnaire de publicités et rapports chiffrés à chaque étape.</div>
       <div><b>Paiement</b>Virement bancaire international, carte ou mobile money. Facture officielle établie par Extraxium Digital SARL.</div>
     </div>
